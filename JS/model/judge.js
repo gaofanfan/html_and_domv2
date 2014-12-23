@@ -1,3 +1,4 @@
+var Question = require('./question');
 function Judge(topicName, standardAnswer, score) {
   Question.call(this, topicName, standardAnswer, score);
 }
@@ -14,3 +15,4 @@ Judge.prototype.countScore = function (answer) {
   }
   return score;
 };
+module.exports = Judge;

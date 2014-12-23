@@ -1,3 +1,4 @@
+var Question = require('./question');
 function Fill(topicName, standardAnswer, score) {
   Question.call(this, topicName, standardAnswer, score);
 }
@@ -19,3 +20,4 @@ Fill.prototype.countScore = function (answer) {
   });
   return score;
 };
+module.exports = Fill;

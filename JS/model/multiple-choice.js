@@ -1,3 +1,4 @@
+var Question = require('./question');
 function  MultipleChoice(topicName, standardAnswer, score) {
   Question.call(this, topicName, standardAnswer, score);
 }
@@ -20,3 +21,4 @@ MultipleChoice.prototype.countScore = function(answer) {
   }
   return score;
 };
+module.exports = MultipleChoice;

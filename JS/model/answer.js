@@ -1,3 +1,9 @@
+var Fill = require('./fill');
+var Choice = require('./choice');
+var MultipleChoice = require('./multiple-choice');
+var Judge = require('./judge');
+var ShortAnswer = require('./short-answer');
+
 function Answer(){
 
 }
@@ -13,3 +19,5 @@ Answer.getstandardAnswer = function () {
     new Judge('4_2', 'Y', 10),
     new ShortAnswer('5_1', '模型是对现实世界的简化和抽象，模型是对所研究的系统过程、事物或概念的一种表达形式。可以是物理实体；可以是某种图形或者是一种数学表达式。', 15)];
 };
+
+module.exports = Answer;

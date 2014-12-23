@@ -1,6 +1,15 @@
+var Question = require('./model/question');
+
+var Answer = require('./model/answer');
+
+$(document).ready(function() {
+  $('#submit').on('click', function() {
+    return printScore();
+  });
+});
 function printScore() {
     var score = 0;
-    var questions = Question.all();
+    var questions = Answer.getstandardAnswer();
 
     _.forEach(questions, function(question) {
       var anwser = document.getElementsByName(question.topicName);
