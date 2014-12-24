@@ -1,7 +1,6 @@
-var Question = require('./model/question');
 
 var Answer = require('./model/answer');
-
+var _ = require('lodash');
 $(document).ready(function() {
   $('#submit').on('click', function() {
     return printScore();
@@ -36,7 +35,6 @@ function printScore() {
     }
 
     document.getElementById('count').innerText = score;
-      return false;
   }
 
 function requiredInput(inputs) {
@@ -44,7 +42,6 @@ function requiredInput(inputs) {
   for (var i = 0; i < inputs.length; i++) {
     var input = inputs[i];
     var element = document.getElementById(input.id);
-    //var element = $('#' + input.id);
     if (element && _.isEmpty(element.value)) {
       alert('请输入您的：' + input.text + '！');
       return true;

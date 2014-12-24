@@ -1,3 +1,4 @@
+var _ = require('lodash');
 var Question = require('./question');
 function Choice(topicName, standardAnswer, score) {
   Question.call(this, topicName, standardAnswer, score);
